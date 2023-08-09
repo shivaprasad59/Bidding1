@@ -1,0 +1,27 @@
+.welcome-books{
+    width: 310px;
+    height: 200px;
+}
+.books{
+    width: 320px;
+    /* border: 0.1px solid black; */
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 15px;
+}
+.welcome{
+ display: flex;
+ justify-content: space-around;
+ margin-top: 80px;
+}
+.books-button,.coins-button{
+    width: 130px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: aqua;
+    margin-left: 190px;
+    padding: 5px;
+}
+button:hover{
+   background-color: black;
+   color: white;
+}
