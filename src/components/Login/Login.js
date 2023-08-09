@@ -10,19 +10,19 @@ function Login() {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-           const response=await axios.get("http://localhost:9090/Login",{
+           const response=await axios.post("http://localhost:9090/Login",{
             email,password
            })
            alert(response.data);
-           if(response.status===404){
-              navigate("/SignUp");
+           if(response.status===201){
+              navigate("/Login");
            }
            if(response.status==200){
             navigate("/Welcome")
            }
         }
         catch(err){
-            console.log("Something Shit happened while sending the data to API");
+            console.log("Something Shit happened while sending the data to API",err);
         }
     }
   return (

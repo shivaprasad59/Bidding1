@@ -14,12 +14,13 @@ app.get("/",async(req,res)=>{
 app.post("/PostSignUpData",async(req,res)=>{
     try{
     const data=await SignUpCollection.find({email:req.body.email});
-    if(data!=null){
+   
+    if(data.length!=0){
         res.status(200).send("Email has been registered...Try to Login");
     }
     else{
         const response=await  SignUpCollection.create(req.body);
-    res.status(200).send("SignedUp Successfully");
+        res.status(200).send("SignedUp Successfully");
     }
     }
     catch{
@@ -27,21 +28,18 @@ app.post("/PostSignUpData",async(req,res)=>{
     }
 })
 
-app.get("/Login",async(req,res)=>{
+app.post("/Login",async(req,res)=>{
     try{
-        const data=await SignUpCollection.find({email:req.body.email});
-        console.log(data);
-        if(data==null){
-            res.status(404).send("Entered Details Not Found.Please try to SignUp...");
+        console.log(req.body.email);
+        const data=await SignUpCollection.find({email:req.body.email,password:req.body.password});
+        
+        if(data.length==0){
+            res.status(201).send("Details not Found...");
         }
         else{
+           
+                res.status(200).send("You have been Logged in Successfully...")
             
-            if(data.password!==req.body.password){
-            res.status(300).send("You have entered wrong password.")
-            }
-            else{
-                res.status(200).send("You have been Logged in Successfully...");
-            }
         }
     }
     catch(err){
