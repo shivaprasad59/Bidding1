@@ -1,13 +1,14 @@
 const mongoose=require("mongoose");
 
 
-mongoose.connect("mongodb://localhost:27017/Bidding")
-.then(()=>{
+mongoose.connect("mongodb://127.0.0.1:27017/Bidding", { useNewUrlParser: true })
+.then(() => {
     console.log("Connected Successfully");
 })
-.catch((err)=>{
-    console.log("Error in Connecting the database");
-})
+.catch((err) => {
+    console.log("Error in Connecting to the database", err);
+});
+
 
 
 const model1=new mongoose.Schema({

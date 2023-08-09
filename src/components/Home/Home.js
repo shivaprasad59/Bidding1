@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FaUserPlus } from 'react-icons/fa'
 function Home() {
   const [user,setUser]=useState("Login")
   return (
@@ -16,7 +17,7 @@ function Home() {
           <a className="nav-link active" aria-current="page" href="#"><Link to="/Login">{user}</Link></a>
         </li>
         <li className="nav-item me-4">
-          <a className="nav-link active" href="#"><Link to="/SignUp">SignUp</Link></a>
+          <a className="nav-link active" href="#"><Link to="/SignUp"><FaUserPlus/>SignUp</Link></a>
         </li>
         
       </ul>
