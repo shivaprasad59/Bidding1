@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import './Login.css'
 function Login() {
    
     const [email,setEmail]=useState("")
@@ -42,6 +43,9 @@ function Login() {
             </div>
             <div>
                 <button onClick={handleSubmit} className='btn btn-success '>Submit</button>
+            </div>
+            <div className='last-linttosignup'>
+                Not a Member? <Link to="/SignUp">Signup now</Link>
             </div>
         </form>
     </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaUserPlus } from 'react-icons/fa'
+import {FaLock} from 'react-icons/fa'
+import './Home.css'
 function Home() {
   const [user,setUser]=useState("Login")
   return (
@@ -14,10 +16,10 @@ function Home() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item me-4">
-          <a className="nav-link active" aria-current="page" href="#"><Link to="/Login">{user}</Link></a>
+          <a className="nav-link active" aria-current="page" href="#"><Link to="/Login" className='Link'><FaLock/>{user}</Link></a>
         </li>
         <li className="nav-item me-4">
-          <a className="nav-link active" href="#"><Link to="/SignUp"><FaUserPlus/>SignUp</Link></a>
+          <a className="nav-link active" href="#"><Link to="/SignUp" className='Link'><FaUserPlus/>SignUp</Link></a>
         </li>
         
       </ul>

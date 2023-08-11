@@ -1,7 +1,6 @@
 const express=require("express")
 const cors=require("cors");
-const SignUpCollection = require("./Connect");
-
+const {SignUpCollection,articraft_collection} = require("./Connect");
 const app=express();
 app.use(express.json())
 app.use(cors())
@@ -47,6 +46,25 @@ app.post("/Login",async(req,res)=>{
     }
 })
 
+app.get("/getArticrafts-books",async(req,res)=>{
+    try{
+       const data=await articraft_collection.find();
+       console.log(data);
+       res.send(data);
+       
+    }
+    catch(err){
+        console.log(err);
+    }
+})
+app.put("/updateCount",async(req,res)=>{
+    try{
+    
+    }
+    catch(err){
+        console.log(err);
+    }
+})
 const PORT=9099
 app.listen(PORT,()=>{
     console.log(`App is listening at the port ${PORT}`);

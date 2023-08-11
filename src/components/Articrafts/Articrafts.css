@@ -1,0 +1,56 @@
+.articrafts-books{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.articrafts-heading{
+    margin-left: 40%;
+    margin-bottom: 4%;
+}
+img{
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 200px;
+}
+.articrafts-books-card{
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 15px grey;
+    width: 252px;
+    border-radius: 20px;
+    height: 300px;
+}
+.boooks-inner-div{
+    display: flex;
+    margin-left: 10px;
+}
+.books-price{
+    margin-top: 4px;
+    margin-left: 40px;
+}
+.books-count{
+    margin-left: 1%;
+    display: flex;
+}
+.books-status{
+    margin-left: 76px;
+    margin-top: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
+    color: black;
+}
+.books-state{
+    margin-left: 40px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.books-inner-2{
+    display: flex;
+}

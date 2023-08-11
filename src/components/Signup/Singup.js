@@ -21,7 +21,7 @@ function Singup() {
            }
         }
         catch(err){
-            console.log("Something Shit happened while sending the data to API");
+            console.log("Something Shit happened while sending the data to API",err);
         }
     }
   return (
